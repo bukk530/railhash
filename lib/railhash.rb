@@ -5,7 +5,7 @@ module RailHash
   #Digest data using sha512
   def self.get_hash(data, salted=true)
     if salted
-      salt = Digest::SHA512.hexdigest( rand().to_s + Time.now.to_f.to_s + Process.pid.to_s )
+      salt = self.random
       return Digest::SHA512.hexdigest( data + salt ) + ":" + salt
     else
       return Digest::SHA512.hexdigest( data )
@@ -20,6 +20,11 @@ module RailHash
     else
       return Digest::SHA512.hexdigest( data ) == hash
     end
+  end
+  
+  #Get a random 512bit hex string
+  def self.random
+    Digest::SHA512.hexdigest( rand().to_s + Time.now.to_f.to_s + Process.pid.to_s )
   end
   
 end
