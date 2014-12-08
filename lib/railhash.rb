@@ -30,4 +30,5 @@ module RailHash
     Digest::SHA512.hexdigest( randstr )
   end
   
+  
 end
