@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Railhash::VERSION
   s.authors     = ["bukk530"]
   s.email       = [""]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Railhash."
-  s.description = "TODO: Description of Railhash."
+  s.homepage    = "https://github.com/bukk530/railhash"
+  s.summary     = "Railhash simplifies data and password hashing"
+  s.description = "Railhash simplifies data and password hashing"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
