@@ -15,7 +15,7 @@ module RailHash
   #Verify if hash was generated from the data
   def self.verify(data, hash, salted=true)
     if salted
-      digest.split! ":"
+      digest = hash.split ":"
       return Digest::SHA512.hexdigest( data + ":" + digest[1] ) == digest[0]
     else
       return Digest::SHA512.hexdigest( data ) == hash
