@@ -1,3 +1,3 @@
-= Railhash
+= RailHash
 
-This project rocks and uses MIT-LICENSE.
+This is a small Rails4 gem that simplifies password hashing.
