@@ -7,8 +7,8 @@ require "railhash/version"
 Gem::Specification.new do |s|
   s.name        = "railhash"
   s.version     = Railhash::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = ["bukk530"]
+  s.email       = [""]
   s.homepage    = "TODO"
   s.summary     = "TODO: Summary of Railhash."
   s.description = "TODO: Description of Railhash."
@@ -18,6 +18,5 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.1.8"
-
-  s.add_development_dependency "sqlite3"
+  
 end
