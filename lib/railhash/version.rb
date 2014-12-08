@@ -1,3 +1,3 @@
-module Railhash
-  VERSION = "0.0.2"
+module RailHash
+  VERSION = "0.0.2.1"
 end

@@ -6,7 +6,7 @@ require "railhash/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "railhash"
-  s.version     = Railhash::VERSION
+  s.version     = RailHash::VERSION
   s.authors     = ["bukk530"]
   s.email       = [""]
   s.homepage    = "https://github.com/bukk530/railhash"

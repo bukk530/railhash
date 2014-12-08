@@ -1,6 +1,6 @@
 require 'digest'
 
-module Railhash
+module RailHash
   
   #Digest data using sha512
   def get_hash(data, salted=true)

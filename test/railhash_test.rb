@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class RailhashTest < ActiveSupport::TestCase
+class RailHashTest < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, Railhash
+    assert_kind_of Module, RailHash
   end
 end
