@@ -1,4 +1,5 @@
 require 'digest'
+require 'securerandom'
 
 module RailHash
   
@@ -23,8 +24,10 @@ module RailHash
   end
   
   #Get a random 512bit hex string
-  def self.random
-    Digest::SHA512.hexdigest( rand().to_s + Time.now.to_f.to_s + Process.pid.to_s )
+  def self.random(secure=true)
+    randstr = rand().to_s + Time.now.to_f.to_s + Process.pid.to_s
+    randstr += SecureRandom.hex if secure
+    Digest::SHA512.hexdigest( randstr )
   end
   
 end
