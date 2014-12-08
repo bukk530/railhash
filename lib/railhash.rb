@@ -6,7 +6,7 @@ module RailHash
   def self.get_hash(data, salted=true)
     if salted
       salt = Digest::SHA512.hexdigest( rand().to_s + Time.now.to_f.to_s + Process.pid.to_s )
-      return Digest::SHA512.hexdigest( data ) + ":" + salt
+      return Digest::SHA512.hexdigest( data + salt ) + ":" + salt
     else
       return Digest::SHA512.hexdigest( data )
     end
@@ -16,7 +16,7 @@ module RailHash
   def self.verify(data, hash, salted=true)
     if salted
       digest = hash.split ":"
-      return Digest::SHA512.hexdigest( data + ":" + digest[1] ) == digest[0]
+      return Digest::SHA512.hexdigest( data + digest[1] ) == digest[0]
     else
       return Digest::SHA512.hexdigest( data ) == hash
     end
