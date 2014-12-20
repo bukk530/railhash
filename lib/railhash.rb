@@ -17,9 +17,9 @@ module RailHash
   def self.verify(data, hash, salted=true)
     if salted
       digest = hash.split ":"
-      return Digest::SHA512.hexdigest( data + digest[1] ) == digest[0]
+      return Digest::SHA512.hexdigest( data + digest[1] ).downcase == digest[0].downcase
     else
-      return Digest::SHA512.hexdigest( data ) == hash
+      return Digest::SHA512.hexdigest( data ).downcase == hash.downcase
     end
   end
   
@@ -29,6 +29,5 @@ module RailHash
     randstr += SecureRandom.hex if secure
     Digest::SHA512.hexdigest( randstr )
   end
-  
   
 end
