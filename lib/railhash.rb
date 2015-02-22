@@ -13,7 +13,8 @@ module RailHash
     end
   end
   
-  self.md5(data)
+  #Digest using md5
+  def self.md5(data)
     Digest::MD5(data)
   end
   
