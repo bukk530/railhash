@@ -15,7 +15,7 @@ module RailHash
   
   #Digest using md5
   def self.md5(data)
-    Digest::MD5(data)
+    Digest::MD5.hexdigest(data)
   end
   
   #Verify if hash was generated from the data
