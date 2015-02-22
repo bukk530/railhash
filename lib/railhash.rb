@@ -13,6 +13,10 @@ module RailHash
     end
   end
   
+  self.md5(data)
+    Digest::MD5(data)
+  end
+  
   #Verify if hash was generated from the data
   def self.verify(data, hash, salted=true)
     if salted
